@@ -1,0 +1,497 @@
+/*
+Theme Name: Below Water
+Author: Sali Anna Aimilia
+*/
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles for desktop */
+header {
+  position: sticky;
+  top: 0; /* Makes the header stick to the top of the viewport */
+  z-index: 1000; /* Ensures the header stays on top of other content */
+  background-color: #fff; /* Optional: Adds a background color */
+  border-bottom: 1px solid #ccc; /* Optional: Adds a border for better visibility */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  padding: 10px 20px; /* Adjust padding as needed */
+  align-items: center; /* Align items vertically */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+
+.language-switcher ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.language-switcher ul li {
+  margin-left: 10px; /* Adjust spacing between language flags */
+}
+
+.language-switcher ul li a {
+  text-decoration: none;
+  display: block;
+}
+
+
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 21px;
+  color: black;
+  font-weight: 700;
+  transition: 100ms ease-in-out;
+}
+
+/* Styles for the hamburger menu */
+.hamburger-menu {
+  display: none; /* Hide by default */
+  font-size: 24px; /* Size of the icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 10px; /* Add some padding for better touch interaction */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide menu by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff; /* Match background color to header */
+    position: absolute;
+    top: 60px; /* Adjust as needed based on header height */
+    left: 0;
+    border-top: 1px solid #ccc; /* Border for visibility */
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu icon */
+  }
+
+  .navbar-menu ul {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .navbar-menu ul li {
+    margin: 0;
+  }
+
+  .navbar-menu ul li a {
+    display: block;
+    padding: 15px; /* Adjust padding as needed */
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .language-switcher {
+    display: none; /* Hide language switcher on small screens */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack logo and nav links vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack the links vertically */
+    width: 100%; /* Full width for the links */
+  }
+
+  nav li {
+    margin: 10px 0; /* Adjust margin between items */
+  }
+
+}
+
+
+.logo-img {
+  width: 90px; /* Adjust as needed */
+  height: auto;
+}
+
+
+    .hero video {
+      z-index: -10000;
+      width: 100%;
+      object-fit: cover;
+
+    }
+
+    .videooverlay::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.768), rgba(0, 0, 0, 0));
+  
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%; 
+    color: white;
+    z-index: 1; 
+}
+
+.overlay-text h1 {
+  font-size: 3.7rem;
+  color:#fff;
+}
+
+@media (max-width: 768px) {
+  .overlay-text h1 {
+    font-size: 2rem;
+    color:#fff;
+    line-height: 40px;
+  }
+
+  .overlay-text p{
+    font-weight: 500;
+  font-size: 12px;
+   display: none;
+  
+  
+  }
+  .videooverlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.768), rgba(0, 0, 0, 0));
+
+}
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem; 
+  font-weight: bold;
+  line-height: 73px;
+  text-align: justify;
+  
+  color: #4A90E2;
+  
+}
+
+p{
+  font-weight: 500;
+  font-size: 18px;
+  left: 35%;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+
+/* Ensure the image has consistent height */
+.card-img-top {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  height: 200px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+/* Set a fixed height for the card body to ensure consistency */
+.card-body {
+  box-shadow: 0px 12px 12px -8px rgba(0, 0, 0, 0.3);
+  height: 200px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ensure card title and text fit within the card body */
+.card-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 18px; 
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-text {
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  flex-grow: 1;
+  overflow: hidden; /* Ensures text doesn’t overflow */
+}
+
+/* Ensure the button always stays at the bottom of the card body */
+.card-body .btn {
+  margin-top: auto;
+}
+
+.custom-card {
+  margin: 0 8px 10px 20px;
+}
+
+/* Card size in grid */
+.col-md-6, .col-lg-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-md-6 
+h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 25px; 
+  margin-bottom: 10px;
+}
+
+/* Ensures card and wrapper have consistent sizing */
+.wrapper {
+  margin-bottom: 60px;
+}
+
+
+.wrapper .btn-outline {
+  background-color:#4A90E2; 
+  color: #fff;
+  border: none; 
+  padding: 12px 20px; 
+  font-size: 18px; 
+  font-weight: 700; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease-in-out; 
+  margin-bottom: 10px;
+}
+.wrapper .btn-outline:hover{
+background-color: #0056b3; }
+
+/* Adjust carousel image */
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+/* Footer Section */
+
+
+
+.footerimage img {
+  width: 100px;  
+  height: 100px; 
+  object-fit: cover; 
+  margin-bottom: 10px;
+  margin: 7px;
+}
+
+.footer-links a {
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007bff; 
+}
+
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #007bff; 
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #6c757d;
+  padding: 20px 0;
+}
+
+.footer-photo4 {
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .footerimage img {
+    width: 80px;  
+    height: 80px;
+  }
+
+
+}
+
+.form-container {
+  background-color: #e3e3e3; 
+  border-radius: 10px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  padding: 30px;
+  margin-top: 30px; 
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container textarea {
+  width: 100%;
+  padding: 12px; 
+  margin: 8px 0; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  background-color: #fff;  
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="tel"]:focus,
+.form-container textarea:focus {
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+  outline: none; 
+}
+
+.form-container textarea {
+  resize: vertical;
+  height: 150px; 
+}
+
+.form-container input[type="submit"] {
+  background-color:#ef34b4; 
+  color: #fff;
+  border: none; 
+  padding: 12px 20px; 
+  font-size: 18px; 
+  font-weight: 700; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease-in-out; 
+  margin-top: 10px; 
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+.wpcf7-not-valid-tip {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+    width: 90%; 
+  }
+}
+
+.custom-shape-divider-bottom-1725969563 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1725969563 svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 223px;
+}
+
+.custom-shape-divider-bottom-1725969563 .shape-fill {
+  fill: #4A90E2;
+} 
+
+.copyright {
+  background-color: #4A90E2;
+  color: #fff;
+}
+
+.copyright i {
+  color: #fff;
+}
+
+.fas.fa-lightbulb {
+  color: #FFD700; /* Gold color */
+  margin-right: 8px; /* Space between the icon and the text */
+}
+
+.h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 18px; 
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
